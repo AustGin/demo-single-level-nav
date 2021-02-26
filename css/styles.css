@@ -21,6 +21,38 @@ ul.menu a {
     text-decoration: none;
     text-transform: uppercase;
     padding: 1rem;
-    /* For links ,always follow the <a> tag to make up the full li space */
+    /* For links ,always follow the <a> tag to make up the full li space. Increase the clickable/tapable space */
     display: block;
 }
+
+@media only screen and (min-width: 480px) {
+    ul.menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.menu li {
+        border: 1px solid white;
+        flex-grow: 1;
+        flex-shrink: 0;
+        /* flex basis 0 is a shorthand for equal space */
+        /* flex basis auto is the width of the content inside */
+        flex-basis: auto;
+        /* use shorthand for flex(flex-grow, flex-shrink, flex-basis) */
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
